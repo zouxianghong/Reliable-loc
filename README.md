@@ -78,3 +78,5 @@ Source code is coming soon！
     </td>
   </tr>
 </table>
+
+*Note*: Both λ and sigma being zero means that registration based on local features is invalid.
