@@ -79,4 +79,4 @@ Source code is coming soon！
   </tr>
 </table>
 
-*Note*: Both λ and sigma being zero means that registration based on local features is invalid.
+**Note**: Both λ and sigma being zero means that registration based on local features is invalid.
