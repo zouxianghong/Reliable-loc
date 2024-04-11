@@ -28,11 +28,11 @@ Source code is coming soon！
   <tr>
     <td>
       <img src="./images/clip1-reg-loc.gif" alt="clip1-reg-loc" width="450">
-      **Reg-loc**
+      <strong>Reg-loc</strong>
     </td>
     <td>
       <img src="./images/clip1-reliable-loc.gif" alt="clip1-reliable-loc" width="450">
-      **Reliable-loc**
+      <strong>Reliable-loc</strong>
     </td>
   </tr>
 </table>
@@ -42,11 +42,11 @@ Source code is coming soon！
   <tr>
     <td>
       <img src="./images/clip2-reg-loc.gif" alt="clip2-reg-loc" width="450">
-      **Reg-loc**
+      <strong>Reg-loc</strong>
     </td>
     <td>
       <img src="./images/clip2-reliable-loc.gif" alt="clip2-reliable-loc" width="450">
-      **Reliable-loc**
+      <strong>Reliable-loc</strong>
     </td>
   </tr>
 </table>
@@ -56,11 +56,11 @@ Source code is coming soon！
   <tr>
     <td>
       <img src="./images/clip3-reg-loc.gif" alt="clip3-reg-loc" width="450">
-      **Reg-loc**
+      <strong>Reg-loc</strong>
     </td>
     <td>
       <img src="./images/clip3-reliable-loc.gif" alt="clip3-reliable-loc" width="450">
-      **Reliable-loc**
+      <strong>Reliable-loc</strong>
     </td>
   </tr>
 </table>
@@ -70,11 +70,11 @@ Source code is coming soon！
   <tr>
     <td>
       <img src="./images/clip4-reg-loc.gif" alt="clip4-reg-loc" width="450">
-      **Reg-loc**
+      <strong>Reg-loc</strong>
     </td>
     <td>
       <img src="./images/clip4-reliable-loc.gif" alt="clip4-reliable-loc" width="450">
-      **Reliable-loc**
+      <strong>Reliable-loc</strong>
     </td>
   </tr>
 </table>
