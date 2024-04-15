@@ -1,26 +1,26 @@
 # Reliable-loc
-Reliable point cloud global localization using geometric verification and pose uncertainty. The implementation is based on PatchAugNet and Overlap-loc
+Reliable point cloud global localization using geometric verification and pose uncertainty. The implementation is based on [PatchAugNet](https://github.com/WHU-USI3DV/PatchAugNet) and [Overlap-loc](https://github.com/PRBonn/overlap_localization)
 
 Source code is coming soon！
 
 # Experimental results of Reliable-loc on 6 data
 ## CS college
-[![cs_college](./images/cs_college.gif)](https://)
+![cs_college](./images/cs_college.gif)
 
 ## Info campus
-[![info_campus](./images/info_campus.gif)](https://)
+![info_campus](./images/info_campus.gif)
 
 ## Zhongshan park
-[![zhongshan_park](./images/zhongshan_park.gif)](https://)
+![zhongshan_park](./images/zhongshan_park.gif)
 
 ## Jiefang road
-[![jiefang_road](./images/jiefang_road.gif)](https://)
+![jiefang_road](./images/jiefang_road.gif)
 
 ## Yanjiang road 1
-[![yanjiang_road1](./images/yanjiang_road1.gif)](https://)
+![yanjiang_road1](./images/yanjiang_road1.gif)
 
 ## Yanjiang road 2
-[![yanjiang_road2](./images/yanjiang_road2.gif)](https://)
+![yanjiang_road2](./images/yanjiang_road2.gif)
 
 # Ablation study: the necessity of switching loc modes
 ## Clip 1: incomplete map coverage
