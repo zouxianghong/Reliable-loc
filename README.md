@@ -4,7 +4,7 @@ Reliable point cloud global localization using geometric verification and pose u
 Source code is coming soon！
 
 # Demo
-![demo](https://youtu.be/-2Iiuy2haCY)
+[![demo](./images/demo.png)](https://youtu.be/-2Iiuy2haCY)
 
 # Experimental results of Reliable-loc on 6 data
 ## CS college
