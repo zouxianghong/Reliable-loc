@@ -1,5 +1,5 @@
 # Reliable-loc
-Reliable point cloud global localization using geometric verification and pose uncertainty. The implementation is based on [PatchAugNet](https://github.com/WHU-USI3DV/PatchAugNet) and [Overlap-loc](https://github.com/PRBonn/overlap_localization)
+Reliable LiDAR global localization using spatial verification and pose uncertainty. The implementation is based on [PatchAugNet](https://github.com/WHU-USI3DV/PatchAugNet), [Overlap-loc](https://github.com/PRBonn/overlap_localization), and [SpectralGV](https://github.com/csiro-robotics/SpectralGV).
 
 Source code is coming soon！
 
