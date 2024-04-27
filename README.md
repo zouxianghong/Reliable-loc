@@ -4,7 +4,7 @@ Reliable LiDAR global localization using spatial verification and pose uncertain
 Source code is coming soon！
 
 # Demo (Click it to see the complete video on YouTube)
-[![demo](./images/demo.gif)](https://youtu.be/-2Iiuy2haCY)
+[![demo](./images/short_demo.gif)](https://youtu.be/H5IX5K_OVLY)
 
 # Experimental results of Reliable-loc on 6 data
 ## CS college
