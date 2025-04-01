@@ -1,2 +1,2 @@
-# Freereg_page
-### Project page of [PatchAugNet](https://github.com/WHU-USI3DV/PatchAugNet)
+# Reliable-loc_page
+### Project page of [Reliable-loc](https://github.com/zouxianghong/Reliable-loc)

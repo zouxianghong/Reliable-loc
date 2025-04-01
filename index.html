@@ -2,10 +2,10 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>PatchAugNet: Patch feature augmentation-based heterogeneous point cloud place recognition in large-scale street scenes</title>
-  <link href="./PatchAugNet/style.css" rel="stylesheet">
-  <script type="text/javascript" src="./PatchAugNet/jquery.mlens-1.0.min.js"></script>
-  <script type="text/javascript" src="./PatchAugNet/jquery.js"></script>
+  <title>Reliable-loc: Robust sequential LiDAR global localization in large-scale street scenes based on verifiable cues</title>
+  <link href="./ReliableLoc/style.css" rel="stylesheet">
+  <script type="text/javascript" src="./ReliableLoc/jquery.mlens-1.0.min.js"></script>
+  <script type="text/javascript" src="./ReliableLoc/jquery.js"></script>
   <style>
     .divider {
       border-right: 2px dashed #737373;
@@ -25,146 +25,126 @@
 
 <body>
   <div class="content">
-    <h1><strong>PatchAugNet: Patch feature augmentation-based heterogeneous point cloud place recognition in large-scale street scenes</strong>
+    <h1><strong>Reliable-loc: Robust sequential LiDAR global localization in large-scale street scenes based on verifiable cues</strong>
     </h1>
     <p id="authors">
       <span>
         <a href="https://zouxianghong.github.io/">Xianghong Zou<sup>1</sup></a>
       </span>
       <span>
-        <a href="https://github.com/kafeiyin00">Jianping Li<sup>4,&dagger;</sup></a>
+        <a href="https://github.com/kafeiyin00">Jianping Li<sup>2,&dagger;</sup></a>
       </span>
       <span>
-        <a>Yuan Wang<sup>2</sup></a>
+        <a href="https://github.com/wwtinwhu">Weitong Wu<sup>3</sup></a>
       </span>
       <span>
         <a>Fuxun Liang<sup>1</sup></a>
       </span>
       <br>
       <span>
-        <a href="https://github.com/wwtinwhu">Weitong Wu<sup>1</sup></a>
-      </span>
-      <span>
-        <a href="https://hpwang-whu.github.io/">Haiping Wang<sup>1</sup></a>
-      </span>
-      <span>
         <a href="https://3s.whu.edu.cn/info/1025/1415.htm">Bisheng Yang<sup>1,&dagger;</sup></a>
       </span>
 	  <span>
-        <a href="https://dongzhenwhu.github.io/">Zhen Dong<sup>1,3</sup></a>
+        <a href="https://dongzhenwhu.github.io/">Zhen Dong<sup>1,4</sup></a>
       </span>
       <br>
       <span class="institution">
         <a href="https://liesmars.whu.edu.cn/"><sup>1</sup> State Key Laboratory of Information Engineering in Surveying, Mapping and Remote Sensing, Wuhan University</a><br>
-        <a href="https://dlxy.jxnu.edu.cn/"><sup>2</sup> School of Geography and Environment, Jiangxi Normal University</a><br>
-		<a href="https://luojia.whu.edu.cn/"><sup>3</sup> Hubei Luojia Laboratory</a><br>
-        <a href="https://www.ntu.edu.sg/eee"><sup>4</sup> School of Electrical and Electronic Engineering, Nanyang Technological University</a></span>  
+		<a href="https://www.ntu.edu.sg/eee"><sup>2</sup> School of Electrical and Electronic Engineering, Nanyang Technological University</a>
+        <a href="https://dlxy.jxnu.edu.cn/"><sup>3</sup> School of Geography and Environment, Jiangxi Normal University</a><br>
+		<a href="https://luojia.whu.edu.cn/"><sup>4</sup> Hubei Luojia Laboratory</a><br>
+	  </span>  
         <sup>&dagger;</sup>Corresponding authors. &nbsp;&nbsp; 
     </p>
     <font size="+2">
       <p style="text-align: center;">
-        <a href="https://www.sciencedirect.com/science/article/pii/S0924271623003106" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
-        <!-- <a href="PatchAugNet/Appendix.pdf" target="_blank">[Supp.]</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
-        <a href="https://github.com/WHU-USI3DV/PatchAugNet" target="_blank">[Code]</a>&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="PatchAugNet/bibtex.txt" target="_blank">[BibTeX]</a>
+        <a href="https://arxiv.org/abs/2411.07815" target="_blank">[Paper]</a> &nbsp;&nbsp;&nbsp;&nbsp;
+        <!-- <a href="ReliableLoc/Appendix.pdf" target="_blank">[Supp.]</a>&nbsp;&nbsp;&nbsp;&nbsp; -->
+        <a href="https://github.com/zouxianghong/Reliable-loc" target="_blank">[Code]</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="ReliableLoc/bibtex.txt" target="_blank">[BibTeX]</a>
       </p>
     </font>
   </div>
 
   <div class="content">
     <h2 style="text-align:center;">Abstract</h2>
-    <p>Point Cloud Place Recognition (PCPR) in street scenesis an essential task in the fields of autonomous driving, robot navigation, and urban map updating. However, the domain gap between heterogeneous point clouds and the difficulty of feature characterization in large-scale complex street scenes pose significant challenges for existing PCPR methods. Most PCPR methods only take into account point clouds collected by the same platforms and sensors, thus they are with poor domain transferability. In this paper, we propose PatchAugNet, which utilizes patch feature augmentation and adaptive pyramid feature aggregation to achieve better performance and generalizability for Heterogeneous Point Cloud-based Place Recognition (HPCPR) tasks. Firstly, multi-scale local features are extracted by the pyramid feature extraction module. Secondly, local features are enhanced by the patch feature augmentation module to overcome the domain gap problem and achieve better feature representation as well as network generalizability. Finally, a global feature is generated using an adaptive pyramid feature aggregation module, which automatically adjusts and balances the proportion of intra-scale and inter-scale features according to the scene content. To evaluate the performance of PatchAugNet, a large-scale heterogeneous point cloud dataset consisting of high-precision Mobile Laser Scanning (MLS) point clouds and helmet-mounted Portable Laser Scanning (PLS) point clouds is collected. The dataset covers various street scenes with a length of over 20km. The comprehensive experimental results indicate that PatchAugNet achieves State-Of-The-Art (SOTA) performance with 83.43% recall@top1% and 60.34% recall@top1 on unseen large-scale street scenes, outperforming existing SOTA PCPR methods by +9.57 recall@top1% and +15.50 recall@top1, while exhibiting better generalizability.</p>
-	<img src="./PatchAugNet/Fig2-PatchAugNet-network-structure.jpg" class="workflow" style="width:100%;"><br>
+    <p>Wearable laser scanning (WLS) system has the advantages of flexibility and portability. It can be used for determining the user's path within a prior map, which is a huge demand for applications in pedestrian navigation, collaborative mapping, augmented reality, and emergency rescue. However, existing LiDAR-based global localization methods suffer from insufficient robustness, especially in complex large-scale outdoor scenes with insufficient features and incomplete coverage of the prior map. To address such challenges, we propose LiDAR-based reliable global localization (Reliable-loc) exploiting the verifiable cues in the sequential LiDAR data. First, we propose a Monte Carlo Localization (MCL) based on spatially verifiable cues, utilizing the rich information embedded in local features to adjust the particles' weights hence avoiding the particles converging to erroneous regions. Second, we propose a localization status monitoring mechanism guided by the sequential pose uncertainties and adaptively switching the localization mode using the temporal verifiable cues to avoid the crash of the localization system. To validate the proposed Reliable-loc, comprehensive experiments have been conducted on a large-scale heterogeneous point cloud dataset consisting of high-precision vehicle-mounted mobile laser scanning (MLS) point clouds and helmet-mounted WLS point clouds, which cover various street scenes with a length of over 30 km. The experimental results indicate that Reliable-loc exhibits high robustness, accuracy, and efficiency in large-scale, complex street scenes, with a position accuracy of ±2.91 m, yaw accuracy of ±3.74 degrees, and achieves real-time performance.</p>
+	<img src="./ReliableLoc/Fig1-Reliable-loc-method-overview.jpg" class="workflow" style="width:100%;"><br>
     <a style="text-align:center">
-      PatchAugNet, <strong>based on patch feature augmentation and adaptive pyramid feature aggregation</strong>, achieves better performance and generalizability for <strong>Heterogeneous Point Cloud-based Place Recognition</strong> tasks.
-	  1)The patch feature augmentation module greatly overcomes the domain gap problem and achieves better feature representation as well as network generalization.
-	  2)The adaptive pyramid feature aggregation module automatically adjusts and balance the proportion of intra-scale and inter-scale features in feature aggregation according to the scene content, which effectively improves the discrimination of global features.
+      Reliable-loc, <strong>based on spatial verification and pose uncertainty</strong>, achieves better robustness in <strong>complex large-scale outdoor scenes with insufficient features and incomplete coverage of the prior map</strong>.
+	  1)The spatial verification-based Monte Carlo localization (MCL) adjust particle weights using the rich information embedded in local features. It improves localization robustness in feature-insufficient scenes by avoiding particles converging to erroneous regions.
+	  2)The pose uncertainty-based localization status monitor mechanism improves localization robustness in scenes with insufficient features and incomplete map coverage by exploiting the exploratory capability of particles in MCL.
 	</a>
   </div>
 
   <div class="content">
     <h2 style="text-align:center;">Introduction</h2>
-    <video width="100%" controls autoplay control src="PatchAugNet/PatchAugNet.mp4" ></video>
-    <a href="https://youtu.be/JJThjIyBU6w?si=2OhPMLf70pPJyoZR" target="_blank">[Youtube]</a>
+    <video width="100%" controls autoplay control src="ReliableLoc/ReliableLoc.mp4" ></video>
+    <a href="https://youtu.be/H5IX5K_OVLY" target="_blank">[Youtube]</a>
   </div>
 
   <div class="content">
     <h2 style="text-align:center;">Experimental Datasets (Self-collected heterogeneous point clouds)</h2>
-    <img class="summary-img" src="./PatchAugNet/Fig5-Experimental-data-overview.jpg" style="width:100%;">
+    <img class="summary-img" src="./ReliableLoc/Fig2-Experiment-data.jpg" style="width:100%;">
     <a>
-       Overview of Experimental Data: The red and blue lines indicate the acquisition trajectories of the MLS and helmet-mounted PLS systems (manually offset for display purposes). The dotted box represents the MLS and PLS point clouds collected at the same location (colored by elevation), and the MLS and PLS systems in black boxes are CHCNAV Alpha 3D and WHU-Helmet respectively.
+       Overview of the experimental data: the red and blue lines are the acquisition trajectories of the vehicle-mounted MLS system and the helmet-mounted WLS system respectively (manually offset for display purposes).
     </a>
     <br><br>
 	
-	<h2 style="text-align:center;">Compare to baseline methods</h2>
+	<h2 style="text-align:center;">Quantitative evaluation</h2>
 	<div>
-	  <img class="summary-img" src="./PatchAugNet/Fig6-1-pr-recall-dataA&B.jpg" style="float:left;width:50%;">
-	  <img class="summary-img" src="./PatchAugNet/Fig6-2-pr-recall-dataA&B.jpg" style="float:right;width:50%;">
+	  <img class="summary-img" src="./ReliableLoc/Fig3-Quantitative-evaluation-curve.jpg" style="width:100%;">
 	</div>
     <a>
-      <center>Recall curves of different methods on experimental data.</center>
+      <center>Localization success rate curves of each method on experimental data. (a), (b), (c), (g), (h), (i), (m) are the R@Xm curves, and (d), (e), (f), (j), (k), (l), (n) are the R@Yd curves.</center>
     </a>
 	<br>
 	
 	<div>
 	  <div>
-	    <img class="summary-img" src="./PatchAugNet/Fig14-1-pr_recall_oxford_3inhouse.jpg" style="float:left;width:50%;">
-	    <img class="summary-img" src="./PatchAugNet/Fig14-2-pr_recall_oxford_3inhouse.jpg" style="float:right;width:50%;">
-	  </div>
-	  <div>
-	    <img class="summary-img" src="./PatchAugNet/Fig14-3-pr_recall_oxford_3inhouse.jpg" style="float:left;width:50%;">
-	    <img class="summary-img" src="./PatchAugNet/Fig14-4-pr_recall_oxford_3inhouse.jpg" style="float:right;width:50%;">
+	    <img class="summary-img" src="./ReliableLoc/Fig4-Quantitative-evaluation-pva.jpg" style="width:100%;">
 	  </div>
 	</div>
     <a>
-      <center> Recall curves of different methods on public datasets.</center>
+      <center> PVA errors of the proposed method. The black color represents the velocity of the WLS at different time points, while the green, red, and blue colors represent the localization errors of the proposed method at different time points, respectively.</center>
     </a>
 	<br>
 	
 	<div>
-	  <img class="summary-img" src="./PatchAugNet/Fig7-success-cases.jpg" style="width:100%;">
+	  <img class="summary-img" src="./ReliableLoc/Fig7-success-cases.jpg" style="width:100%;">
 	</div>
     <a>
       <center> Cases are presented to demonstrate the proposed method for place recognition on dataset B. Each case is represented by a single row, with the first column containing the query submap and the 2nd to 6th columns containing the top 1 to top 5 retrieved submaps, respectively.</center>
     </a>
     <br><br>
 
-    <h2 style="text-align:center;">Visualization of patch feature augmentation</h2>
+    <h2 style="text-align:center;">Analysis and discussion</h2>
 	<div>
-	  <img class="summary-img" src="./PatchAugNet/Fig9-Patch-reconstruction-results.jpg" style="width:100%;">
+	  <img class="summary-img" src="./ReliableLoc/Fig5-ablation-SGV-Scoring.jpg" style="width:100%;">
 	</div>
     <a>
-      <center>Patch reconstruction results of PatchAugNet: the reconstruction results of all patches in the submap are plotted together for the convenience of presentation.</center>
+      <center>Localization trajectories in the four clips when the initial position is known and the yaw is unknown. The black, blue, green, and orange lines are the trajectories of the Ground Truth, PF-loc, PF-SGV-loc, and PF-SGV2-loc, respectively, with the green pentagram as the starting point and the red pentagram as the end point.</center>
     </a>
 	<br>
 	
 	<div>
-	  <img class="summary-img" src="./PatchAugNet/Fig10-Cases-of-hard-negative-patch-mining.jpg" style="width:100%;">
+	  <img class="summary-img" src="./ReliableLoc/Fig6-Loc-mode-switch-necessity.jpg" style="width:100%;">
 	</div>
     <a>
-      <center>Cases of hard negative patch mining based on geometric similarity (the value below the image is the value of KL scatter, which is one-thousandth of the true value).</center>
-    </a>
-	<br><br>
-	
-	<h2 style="text-align:center;">Effect of PFA and APFA</h2>
-	<div>
-	  <img class="summary-img" src="./PatchAugNet/Fig13-with-without-PFA&APFA-cases.jpg" style="width:100%;">
-	</div>
-    <a>
-      <center>Place recognition cases using/without patch feature augmentation (PFA) and adaptive pyramid feature aggregation (APFA) modules show red boxes indicating failure and green boxes indicating success.</center>
+      <center>Localization trajectories of Reg-loc and Reliable-loc on four typical scenes. The black, green, and red lines are the trajectories of the Ground Truth, Reg-loc, and Reliable-loc, respectively, with the green pentagram as the starting point and the red pentagram as the end point.</center>
     </a>
 	<br><br>
   </div>
 
   <div class="content">
     <h2>BibTex</h2>
-    <code> @article{zou2023PatchAugNet,<br>
-  &nbsp;&nbsp;title={PatchAugNet: Patch feature augmentation-based heterogeneous point cloud place recognition in large-scale street scenes},<br>
-  &nbsp;&nbsp;author={Xianghong Zou and Jianping Li and Yuan Wang and Fuxun Liang and Weitong Wu and Haiping Wang and Bisheng Yang and Zhen Dong},<br>
+    <code> @article{{zou2025reliableloc,,<br>
+  &nbsp;&nbsp;title={Reliable-loc: Robust sequential LiDAR global localization in large-scale street scenes based on verifiable cues},<br>
+  &nbsp;&nbsp;author={Xianghong Zou and Jianping Li and Weitong Wu and Fuxun Liang and Bisheng Yang and Zhen Dong},<br>
   &nbsp;&nbsp;journal={ISPRS Journal of Photogrammetry and Remote Sensing},<br>
-  &nbsp;&nbsp;volume={206},<br>
-  &nbsp;&nbsp;pages={273--292},<br>
-  &nbsp;&nbsp;year={2023}<br>
+  &nbsp;&nbsp;volume={xxx},<br>
+  &nbsp;&nbsp;pages={xxx--xxx},<br>
+  &nbsp;&nbsp;year={2025}<br>
   &nbsp;&nbsp;publisher={Elsevier}<br>
   } </code>
   </div>
