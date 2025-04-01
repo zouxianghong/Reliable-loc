@@ -1,0 +1,9 @@
+@article{zou2025reliableloc,
+  title={Reliable-loc: Robust sequential LiDAR global localization in large-scale street scenes based on verifiable cues},
+  author={Zou, Xianghong and Li, Jianping and Wu, Weitong and Liang, Fuxun and Yang, Bisheng and Dong, Zhen},
+  journal={ISPRS Journal of Photogrammetry and Remote Sensing},
+  volume={xxx},
+  pages={xxx--xxx},
+  year={2025},
+  publisher={Elsevier}
+}
