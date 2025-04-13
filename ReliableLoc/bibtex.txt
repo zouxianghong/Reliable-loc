@@ -1,9 +1,11 @@
-@article{zou2025reliableloc,
-  title={Reliable-loc: Robust sequential LiDAR global localization in large-scale street scenes based on verifiable cues},
-  author={Zou, Xianghong and Li, Jianping and Wu, Weitong and Liang, Fuxun and Yang, Bisheng and Dong, Zhen},
-  journal={ISPRS Journal of Photogrammetry and Remote Sensing},
-  volume={xxx},
-  pages={xxx--xxx},
-  year={2025},
-  publisher={Elsevier}
+@article{ZOU2025287,
+title = {Reliable-loc: Robust sequential LiDAR global localization in large-scale street scenes based on verifiable cues},
+journal = {ISPRS Journal of Photogrammetry and Remote Sensing},
+volume = {224},
+pages = {287-301},
+year = {2025},
+issn = {0924-2716},
+doi = {https://doi.org/10.1016/j.isprsjprs.2025.03.029},
+url = {https://www.sciencedirect.com/science/article/pii/S0924271625001340},
+author = {Xianghong Zou and Jianping Li and Weitong Wu and Fuxun Liang and Bisheng Yang and Zhen Dong}
 }
