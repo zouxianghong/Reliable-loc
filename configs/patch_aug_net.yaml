@@ -1,0 +1,94 @@
+MANUAL_SEED: 123
+TRAIN_GPU:
+  - 0
+
+model_type: "patch_aug_net"
+use_patch_recon: True
+use_patch_feature_contrast: True
+use_hard_negative_patch_mining: True
+AGGREGATION_TYPE: 2  # 1~5, Max Pooling=3, APFA1=1, APFA2(ours)=2
+weight_place_recognition: 1.0
+weight_patch_recon: 0.25
+weight_patch_feature_contrast: 0.25
+
+GROUP: 8
+AGGREGATION: 'spvlad'
+NUM_POINTS: 4096
+
+FEATURE_OUTPUT_DIM: 256
+
+FEATURE_SIZE:
+  - 256
+  - 256
+  - 256
+
+MAX_SAMPLES:
+  - 128
+  - 1024
+  - 4096
+
+CLUSTER_SIZE:
+  - 4
+  - 16
+  - 64
+
+OUTPUT_DIM:
+  - 256
+  - 256
+  - 256
+
+USE_ORIGIN_PC_IN_FP: True
+USE_SPA_ATT_AFTER_FP: True
+GATING: False
+
+SAMPLING:
+  - 1024
+  - 128
+  - 16
+
+KNN:
+  - 20
+  - 20
+  - 20
+
+KNN_DILATION: 2
+
+EXP_DIR: /home/ericxhzou/Code/ppt-net-plus/exp
+
+# TRAIN
+DATA_AUGMENTATION: True
+TRAIN_BATCH_SIZE: 8  # i.e. num of query
+TRAIN_POSITIVES_PER_QUERY: 2
+TRAIN_NEGATIVES_PER_QUERY: 14
+
+DECAY_STEP: 200000
+DECAY_RATE: 0.7
+
+# BASE_LEARNING_RATE: 0.00001  /  0.0005
+BASE_LEARNING_RATE: 0.0005
+MOMENTUM: 0.9
+OPTIMIZER: 'adam'
+MAX_EPOCH: 30
+
+LEARNING_RATE_DECAY: 'step'
+
+# the margin is too small
+MARGIN_1: 0.5
+MARGIN_2: 0.2
+
+# LOSS
+LOSS_FUNCTION: 'quadruplet'
+LOSS_LAZY: True
+TRIPLET_USE_BEST_POSITIVES: False
+LOSS_IGNORE_ZERO_BATCH: False
+
+# EVAL6
+EVAL_BATCH_SIZE: 1
+EVAL_POSITIVES_PER_QUERY: 4
+EVAL_NEGATIVES_PER_QUERY: 10
+
+#  ----------- switch data for evaluation ----------
+# WHU Data: hankou, campus
+# Oxford RobotCar: oxford
+# 3-Inhouse: university, residential, business
+dataset: 'oxford'

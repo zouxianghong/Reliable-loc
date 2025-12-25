@@ -1,0 +1,74 @@
+# ----------------------------------------------
+# Experiment definition
+#
+
+# weights from older training. Not used if empty
+model_type: 'patch_aug_net'
+
+# name of dataset
+dataset: 'cs_college'
+
+# start / end idx
+start_idx: 0  # cs_college: 0, info_campus: 300, zhongshan_park: 0, jiefang_road: 0, yanjiang_road1: 400, yanjiang_road2: 0
+end_idx: 50000
+
+# ----------------------------------------------
+# Parameter settings for Monte Carlo Localization
+
+# init type
+init_type: 'default'  # default, gt_xy_yaw, gt_xy
+
+# number of particles
+num_particles: 5000
+
+# when the number of occupied grids is smaller than the threshold,
+# we say the localization converged. Using -1 to disable this.
+converge_thres: 36  # 4 or 36 or 225  -> 30x30m
+
+# after convergency, we reduce the number of particles and using only num_reduced particles.
+num_reduced: 400
+
+# only update the weights when the car is moving larger than the move_thres
+move_thres: 0.2
+
+# motion noise
+noise_dist: 0.2
+noise_rot1: 0.015
+noise_rot2: 0.015
+
+# use spectral matching verification
+use_sgv: True
+use_yaw: True
+
+# visualize the localization results online
+visualize: True
+
+# save the particles of every frame for later evaluation or offline visualization
+save_result: True
+exp_dir: /home/ericxhzou/Code/ppt-net-plus/exp/mc_loc
+
+# ----------------------------------------------
+# Parameter settings for Registration-based Localization
+
+# solver / certifier params
+cbar2: 1
+noise_bound: 1.0
+estimate_scaling: False  # default value is False, do not estimate scale
+rotation_gnc_factor: 1.4
+rotation_max_iterations: 100
+rotation_cost_threshold: 1e-6
+rotation_only_yaw: True  # default value is True, estimate 4D (x-y-z-yaw) transformation
+sub_optimality: 100  # 1e-3
+
+use_certify_algo: False  # True: use teaser++ certify algo(we find it doesn't work), False: use reliable value and standard variance
+min_reliable_value: 0.004  # 2^0 * 1e-3
+max_sigma_x: 10.0  # in meter
+max_sigma_y: 10.0  # in meter
+max_sigma_yaw: 5.0  # in degree
+
+check_reg_by_odo: False
+
+#  0: use only particle filter and without any certification;
+#  1: switch between pf loc and reg loc adaptively;
+# -1: use only reg loc once pf loc is converged
+loc_mode: 1

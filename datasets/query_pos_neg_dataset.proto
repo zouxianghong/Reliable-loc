@@ -1,0 +1,42 @@
+syntax = "proto3";
+package p2m.base_type;
+
+message DataRecord {
+  string name = 1;
+  double x = 2;
+  double y = 3;
+};
+
+message DataRecords {
+  repeated DataRecord records = 1;
+}
+
+message Uint32Pair {
+  uint32 idx1 = 1;
+  repeated uint32 near_indices2 = 2;
+  repeated uint32 far_indices2 = 3;
+  repeated uint32 bad_far_indices2 = 4;
+}
+
+message QueryPosOverlapIndices {
+  uint32 positive_idx = 2;
+  repeated Uint32Pair overlap_indices = 3;
+  repeated Uint32Pair inv_overlap_indices = 4;
+}
+
+message QueryOverlapIndices {
+  uint32 query_idx = 1;
+  repeated QueryPosOverlapIndices qp_overlap_indices = 2;
+}
+
+message QueryPosNegTuple {
+  repeated uint32 positive_indices = 1;
+  repeated uint32 non_negative_indices = 2;
+};
+
+message DataSet {
+  repeated string trip_names = 1;
+  repeated DataRecord records = 2;
+  repeated uint32 records_size_list = 3;
+  map<uint32, QueryPosNegTuple> tuples = 4;
+};
